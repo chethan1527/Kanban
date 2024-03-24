@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #FFD700; /* Changed background color to gold */
+    position: relative; /* Set position to relative */
+}
+
+.container {
+    text-align: center;
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position from the top of the viewport */
+}
+
+/* Heading Styles */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Added custom font */
+    color: white;
+    font-size: 48px; /* Increased font size */
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+    background-image: linear-gradient(to right, #ff8a00, #e52e71); /* Added gradient background */
+    -webkit-background-clip: text; /* Clip text to the background */
+    -webkit-text-fill-color: transparent; /* Set text fill color to transparent */
+}
+
+/* Kanban Board Styles */
+.kanban {
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background:gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kanban * {
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Kanban Column Styles */
+.kanban__column {
+    flex: 1;
+}
+
+.kanban__column:not(:last-child) {
+    margin-right: 20px;
+}
+
+.kanban__column-title {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #fff;
+    user-select: none;
+}
+
+/* Kanban Item Input Styles */
+.kanban__item-input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Kanban Dropzone Styles */
+.kanban__dropzone {
+    height: 8px;
+    transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Kanban Add Item Button Styles */
+.kanban__add-item {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    background: #25cd16;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.kanban__add-item:hover {
+    background: #0e0d0d;
+}
